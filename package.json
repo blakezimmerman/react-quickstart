@@ -6,7 +6,7 @@
   "license": "ISC",
   "main": "src/server/app.ts",
   "scripts": {
-    "start": "nodemon --watch 'src/server/**/*.ts' --exec 'ts-node' src/server/app.ts",
+    "start": "nodemon --watch 'src/server/**/*.ts' --exec ts-node src/server/app.ts",
     "start-prod": "node ./dist/server/server.bundle.js",
     "build-server": "webpack --config webpack/webpack.server.js --bail",
     "build-client": "webpack --config webpack/webpack.prod.js --bail",
