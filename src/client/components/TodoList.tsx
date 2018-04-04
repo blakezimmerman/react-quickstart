@@ -4,18 +4,6 @@ import { Todo } from 'models/todos';
 import TodoCard from './TodoCard';
 import axios from 'axios';
 
-const ListWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-const List = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
 interface Props {
   todos: Todo[];
   complete: (id: string) => () => void;
@@ -24,8 +12,8 @@ interface Props {
 class TodoList extends React.Component<Props> {
   render() {
     return (
-      <ListWrapper>
-        <List>
+      <>
+        <div>
           <h2>Active</h2>
           {this.props.todos
             .filter((todo) => !todo.completed)
@@ -37,8 +25,8 @@ class TodoList extends React.Component<Props> {
               />
             )
           }
-        </List>
-        <List>
+        </div>
+        <div>
           <h2>Completed</h2>
           {this.props.todos
             .filter((todo) => todo.completed)
@@ -49,8 +37,8 @@ class TodoList extends React.Component<Props> {
               />
             )
           }
-        </List>
-      </ListWrapper>
+        </div>
+      </>
     );
   }
 }
