@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 exports.APP_DIR = path.resolve(__dirname, '../src/client');
+exports.MODELS_DIR = path.resolve(__dirname, '../src/models');
 exports.BUILD_DIR = path.resolve(__dirname, '../dist/client');
 
 exports.commonConfig = {
@@ -17,7 +18,7 @@ exports.commonConfig = {
     rules: [
       {
         test: /\.tsx?$/,
-        include: [this.APP_DIR],
+        include: [this.APP_DIR, this.MODELS_DIR],
         use: 'ts-loader'
       },
       {

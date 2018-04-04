@@ -5,6 +5,7 @@ const copyNodeModules = require('copy-node-modules');
 
 const ROOT_DIR = path.resolve(__dirname, '../');
 const SERVER_DIR = path.resolve(__dirname, '../src/server');
+const MODELS_DIR = path.resolve(__dirname, '../src/models');
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const BUILD_DIR = path.resolve(__dirname, '../dist/server');
 
@@ -55,7 +56,7 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/,
-        include: [SERVER_DIR],
+        include: [SERVER_DIR, MODELS_DIR],
         use: 'ts-loader'
       }
     ]

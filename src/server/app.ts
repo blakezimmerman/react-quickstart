@@ -8,6 +8,10 @@ export const clientConfig = { host };
 import * as express from 'express';
 const app = express();
 
+// Add routes
+import routes from './routes';
+routes(app);
+
 // Serve app
 import serveApp from './serveApp';
 serveApp(app);
