@@ -1,18 +1,20 @@
 {
-    "compilerOptions": {
-      "sourceMap": true,
-      "strictNullChecks": true,
-      "noImplicitAny": true,
-      "noImplicitThis": true,
-      "alwaysStrict": true,
-      "lib": ["esnext", "dom"],
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "target": "es5",
-      "allowJs": true,
-      "jsx": "react",
-      "baseUrl": "./src"
-    },
-    "include": ["./src/**/*"],
-    "exclude": ["./node_modules"]
+  "compilerOptions": {
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "lib": ["esnext", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "allowJs": true,
+    "jsx": "react",
+    "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["./node_modules"]
 }

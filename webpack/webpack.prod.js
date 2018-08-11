@@ -1,21 +1,17 @@
-const webpack = require('webpack');
-const webpackMerge = require('webpack-merge');
-const { APP_DIR, BUILD_DIR, commonConfig } = require('./webpack.common.js');
-const compressionPlugin = require('compression-webpack-plugin');
+const webpack = require("webpack");
+const webpackMerge = require("webpack-merge");
+const { APP_DIR, BUILD_DIR, commonConfig } = require("./webpack.common.js");
+const compressionPlugin = require("compression-webpack-plugin");
 
 module.exports = webpackMerge(commonConfig, {
-  mode: 'production',
+  mode: "production",
 
-  entry: [
-    APP_DIR + '/index.tsx'
-  ],
+  entry: [APP_DIR + "/index.tsx"],
 
   output: {
     path: BUILD_DIR,
-    filename: 'app.[hash].bundle.js'
+    filename: "app.[hash].bundle.js",
   },
 
-  plugins: [
-    new compressionPlugin()
-  ]
+  plugins: [new compressionPlugin()],
 });
