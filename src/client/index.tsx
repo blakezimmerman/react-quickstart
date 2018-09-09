@@ -10,6 +10,6 @@ renderRoot(App);
 
 if (module.hot) {
   module.hot.accept("./containers/App", () => {
-    renderRoot(require("./containers/App").default);
+    renderRoot(require("./containers/App").App);
   });
 }
